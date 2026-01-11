@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Husham Tahir | BS Nursing Portfolio</title>
+    <meta name="description" content="Professional BS Nursing Portfolio by Husham Tahir - Risk Management in Nursing & Clinical Assessment" />
+    <meta name="author" content="Husham Tahir" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navigation" class="nav">
+        <div class="nav-container">
+            <div class="nav-content">
+                <a href="#home" class="nav-logo" onclick="handleNavClick(event, '#home')">HT</a>
+                
+                <!-- Desktop Navigation -->
+                <div class="nav-links-desktop">
+                    <a href="#home" onclick="handleNavClick(event, '#home')">Home</a>
+                    <a href="#about" onclick="handleNavClick(event, '#about')">About</a>
+                    <a href="#risk-management" onclick="handleNavClick(event, '#risk-management')">Risk Management</a>
+                    <a href="#measurements" onclick="handleNavClick(event, '#measurements')">Measurements</a>
+                    <a href="#conclusion" onclick="handleNavClick(event, '#conclusion')">Conclusion</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="nav-toggle" onclick="toggleMobileMenu()" aria-label="Toggle menu">
+                    <svg id="menu-icon" class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                    <svg id="close-icon" class="icon hidden" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div id="mobile-nav" class="nav-links-mobile">
+                <a href="#home" onclick="handleNavClick(event, '#home')">Home</a>
+                <a href="#about" onclick="handleNavClick(event, '#about')">About</a>
+                <a href="#risk-management" onclick="handleNavClick(event, '#risk-management')">Risk Management</a>
+                <a href="#measurements" onclick="handleNavClick(event, '#measurements')">Measurements</a>
+                <a href="#conclusion" onclick="handleNavClick(event, '#conclusion')">Conclusion</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-decorative">
+            <div class="hero-blob hero-blob-1"></div>
+            <div class="hero-blob hero-blob-2"></div>
+        </div>
+
+        <div class="container hero-content">
+            <div class="hero-animate">
+                <!-- Profile Photo -->
+                <div class="hero-photo">
+                    <div class="hero-photo-wrapper">
+                        <img src="src/assets/profile-photo.png" alt="Husham Tahir" />
+                    </div>
+                </div>
+                
+                <p class="hero-subtitle">BS Nursing Portfolio</p>
+                <h1 class="hero-title">Husham Tahir</h1>
+                <div class="hero-divider"></div>
+                <p class="hero-description">Professional Nursing Practice</p>
+                <p class="hero-institution">Al-Ain Institute of Medical Sciences</p>
+            </div>
+
+            <button class="hero-scroll" onclick="scrollToAbout()" aria-label="Scroll to content">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section section-gradient-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About This Portfolio</h2>
+                <p class="section-description">
+                    A comprehensive showcase of essential nursing competencies in risk management 
+                    and clinical assessment procedures.
+                </p>
+            </div>
+
+            <div class="info-grid">
+                <div class="info-card">
+                    <div class="info-card-content">
+                        <div class="info-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="info-label">Name</p>
+                            <p class="info-value">Husham Tahir</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-card-content">
+                        <div class="info-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                                <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="info-label">Program</p>
+                            <p class="info-value">BS Nursing</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-card-content">
+                        <div class="info-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect>
+                                <path d="M9 22v-4h6v4"></path>
+                                <path d="M8 6h.01"></path>
+                                <path d="M16 6h.01"></path>
+                                <path d="M12 6h.01"></path>
+                                <path d="M12 10h.01"></path>
+                                <path d="M12 14h.01"></path>
+                                <path d="M16 10h.01"></path>
+                                <path d="M16 14h.01"></path>
+                                <path d="M8 10h.01"></path>
+                                <path d="M8 14h.01"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="info-label">Institution</p>
+                            <p class="info-value">Al-Ain Institute of Medical Sciences</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-card-content">
+                        <div class="info-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="info-label">Course</p>
+                            <p class="info-value">Professional Nursing Practice</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-card-content">
+                        <div class="info-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="info-label">Instructor</p>
+                            <p class="info-value">Maryam Mukhtar</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-card-content">
+                        <div class="info-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="16" y1="2" x2="16" y2="6"></line>
+                                <line x1="8" y1="2" x2="8" y2="6"></line>
+                                <line x1="3" y1="10" x2="21" y2="10"></line>
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="info-label">Date</p>
+                            <p class="info-value">December 1, 2026</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="topics-container">
+                <h3 class="topics-title">Portfolio Topics</h3>
+                <div class="topics-tags">
+                    <span class="topic-tag topic-tag-primary">Risk Management in Nursing</span>
+                    <span class="topic-tag topic-tag-secondary">Measuring Weight & Height</span>
+                    <span class="topic-tag topic-tag-accent">BMI Calculations</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Risk Management Section -->
+    <section id="risk-management" class="section">
+        <div class="container">
+            <!-- Header -->
+            <div class="section-header">
+                <div class="section-badge">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    </svg>
+                    <span>Topic 1</span>
+                </div>
+                <h2 class="section-title">Risk Management in Nursing</h2>
+                <p class="section-description">
+                    Risk management refers to the systematic process of identifying, assessing, and reducing 
+                    risks that may negatively affect patients, staff, or outcomes. It ensures patient safety, 
+                    quality of care, and reduces adverse events.
+                </p>
+            </div>
+
+            <!-- Key Benefits -->
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <h4 class="benefit-title">Prevents Clinical Errors</h4>
+                    <p class="benefit-description">Systematic approach reduces mistakes in patient care</p>
+                </div>
+                <div class="benefit-card">
+                    <h4 class="benefit-title">Improves Outcomes</h4>
+                    <p class="benefit-description">Better patient health results through proactive measures</p>
+                </div>
+                <div class="benefit-card">
+                    <h4 class="benefit-title">Reduces Costs</h4>
+                    <p class="benefit-description">Fewer adverse events mean lower healthcare expenses</p>
+                </div>
+                <div class="benefit-card">
+                    <h4 class="benefit-title">Promotes Safety Culture</h4>
+                    <p class="benefit-description">Creates an environment focused on patient wellbeing</p>
+                </div>
+            </div>
+
+            <!-- Risk Management Steps -->
+            <div class="steps-section">
+                <h3 class="steps-title">Risk Management Steps</h3>
+                <div class="steps-container">
+                    <div class="step-card">
+                        <div class="step-number">1</div>
+                        <div>
+                            <h4 class="step-card-title">Identification</h4>
+                            <p class="step-card-description">Detect potential risks in the clinical environment</p>
+                        </div>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">2</div>
+                        <div>
+                            <h4 class="step-card-title">Analysis</h4>
+                            <p class="step-card-description">Determine severity and likelihood of each risk</p>
+                        </div>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <div>
+                            <h4 class="step-card-title">Planning</h4>
+                            <p class="step-card-description">Develop strategies to prevent harmful events</p>
+                        </div>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">4</div>
+                        <div>
+                            <h4 class="step-card-title">Implementation</h4>
+                            <p class="step-card-description">Apply interventions systematically</p>
+                        </div>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">5</div>
+                        <div>
+                            <h4 class="step-card-title">Evaluation</h4>
+                            <p class="step-card-description">Monitor changes and improvements</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 9 Ways to Prevent Medical Errors -->
+            <div class="prevention-card">
+                <h3 class="prevention-title">9 Ways Nurses Can Prevent Medical Errors</h3>
+                <div class="prevention-grid">
+                    <div class="prevention-item">
+                        <span class="prevention-number">1</span>
+                        <p>Ask for clarification when unsure</p>
+                    </div>
+                    <div class="prevention-item">
+                        <span class="prevention-number">2</span>
+                        <p>Utilize staff and supervisors as resources</p>
+                    </div>
+                    <div class="prevention-item">
+                        <span class="prevention-number">3</span>
+                        <p>Complete hourly patient rounding</p>
+                    </div>
+                    <div class="prevention-item">
+                        <span class="prevention-number">4</span>
+                        <p>Practice the 4 P's of purposeful rounding</p>
+                    </div>
+                    <div class="prevention-item">
+                        <span class="prevention-number">5</span>
+                        <p>Document thoroughly</p>
+                    </div>
+                    <div class="prevention-item">
+                        <span class="prevention-number">6</span>
+                        <p>Report adverse events to supervisors</p>
+                    </div>
+                    <div class="prevention-item">
+                        <span class="prevention-number">7</span>
+                        <p>Watch for abnormal vital signs</p>
+                    </div>
+                    <div class="prevention-item">
+                        <span class="prevention-number">8</span>
+                        <p>Limit overtime when possible</p>
+                    </div>
+                    <div class="prevention-item">
+                        <span class="prevention-number">9</span>
+                        <p>Use closed-loop communication</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Example -->
+            <div class="example-box">
+                <p class="example-text">
+                    <span class="example-bold">Example:</span> A nurse who follows infection control policies 
+                    reduces hospital-acquired infections, demonstrating effective risk management in action.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Measurements Section -->
+    <section id="measurements" class="section section-gradient-section">
+        <div class="container">
+            <!-- Header -->
+            <div class="section-header">
+                <div class="section-badge">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+                        <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+                        <path d="M12 11h4"></path>
+                        <path d="M12 16h4"></path>
+                        <path d="M8 11h.01"></path>
+                        <path d="M8 16h.01"></path>
+                    </svg>
+                    <span>Topic 2</span>
+                </div>
+                <h2 class="section-title">Measuring Weight & Height</h2>
+                <p class="section-description">
+                    Accurate measurement of height and weight is a basic nursing assessment. These measurements 
+                    help calculate Body Mass Index (BMI) — a key indicator of nutritional status and health risks.
+                </p>
+            </div>
+
+            <!-- Measurement Procedures -->
+            <div class="measurement-procedures">
+                <!-- Weight -->
+                <div class="measurement-card">
+                    <div class="measurement-header">
+                        <div class="measurement-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+                                <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+                                <path d="M12 11h4"></path>
+                                <path d="M12 16h4"></path>
+                                <path d="M8 11h.01"></path>
+                                <path d="M8 16h.01"></path>
+                            </svg>
+                        </div>
+                        <h3 class="measurement-title">How to Measure Weight</h3>
+                    </div>
+                    <ol class="measurement-steps">
+                        <li>
+                            <span class="step-marker">1</span>
+                            <p>Ask the patient to remove shoes & heavy clothes</p>
+                        </li>
+                        <li>
+                            <span class="step-marker">2</span>
+                            <p>Use a calibrated weighing scale</p>
+                        </li>
+                        <li>
+                            <span class="step-marker">3</span>
+                            <p>Ensure the patient stands still</p>
+                        </li>
+                        <li>
+                            <span class="step-marker">4</span>
+                            <p>Record weight precisely</p>
+                        </li>
+                    </ol>
+                </div>
+
+                <!-- Height -->
+                <div class="measurement-card">
+                    <div class="measurement-header">
+                        <div class="measurement-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                        </div>
+                        <h3 class="measurement-title">How to Measure Height</h3>
+                    </div>
+                    <ol class="measurement-steps">
+                        <li>
+                            <span class="step-marker">1</span>
+                            <p>Stand patient against a stadiometer or wall</p>
+                        </li>
+                        <li>
+                            <span class="step-marker">2</span>
+                            <p>Heels, buttocks, and shoulders aligned</p>
+                        </li>
+                        <li>
+                            <span class="step-marker">3</span>
+                            <p>Record height at top of head</p>
+                        </li>
+                        <li>
+                            <span class="step-marker">4</span>
+                            <p>Use same method each time</p>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+
+            <!-- BMI Formula -->
+            <div class="bmi-formula-card">
+                <div class="bmi-formula-header">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect>
+                        <line x1="9" y1="7" x2="15" y2="7"></line>
+                        <line x1="9" y1="11" x2="15" y2="11"></line>
+                        <line x1="9" y1="15" x2="13" y2="15"></line>
+                    </svg>
+                    <h3 class="bmi-formula-title">Calculating BMI</h3>
+                </div>
+
+                <div class="bmi-formula-display">
+                    <div class="bmi-formula-display-inner">
+                        <p class="bmi-formula-text">BMI = Weight (kg) ÷ Height² (m²)</p>
+                    </div>
+                </div>
+
+                <div class="bmi-example-box">
+                    <p class="bmi-example-text">
+                        <span class="bmi-example-bold">Example:</span><br />
+                        Weight = 70 kg, Height = 1.75 m<br />
+                        <span class="bmi-formula-calc">BMI = 70 ÷ (1.75 × 1.75) = 22.86</span><br />
+                        <span class="bmi-example-note">(Within normal range)</span>
+                    </p>
+                </div>
+            </div>
+
+            <!-- BMI Categories -->
+            <div class="bmi-categories-section">
+                <h3 class="bmi-categories-title">BMI Categories</h3>
+                <div class="bmi-categories-grid">
+                    <div class="bmi-category bmi-category-underweight">
+                        <p class="bmi-category-range">< 18.5</p>
+                        <p class="bmi-category-name">Underweight</p>
+                    </div>
+                    <div class="bmi-category bmi-category-normal">
+                        <p class="bmi-category-range">18.5 - 24.9</p>
+                        <p class="bmi-category-name">Normal</p>
+                    </div>
+                    <div class="bmi-category bmi-category-overweight">
+                        <p class="bmi-category-range">25 - 29.9</p>
+                        <p class="bmi-category-name">Overweight</p>
+                    </div>
+                    <div class="bmi-category bmi-category-obese">
+                        <p class="bmi-category-range">≥ 30</p>
+                        <p class="bmi-category-name">Obese</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BMI Examples Table -->
+            <div class="bmi-table-card">
+                <div class="bmi-table-header">
+                    <h3 class="bmi-table-title">BMI Examples</h3>
+                </div>
+                <div class="bmi-table-wrapper">
+                    <table class="bmi-table">
+                        <thead>
+                            <tr>
+                                <th>Height</th>
+                                <th>Weight</th>
+                                <th>BMI</th>
+                                <th>Category</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1.50 m</td>
+                                <td>45 kg</td>
+                                <td class="bmi-table-value">20</td>
+                                <td><span class="bmi-badge bmi-badge-normal">Normal</span></td>
+                            </tr>
+                            <tr>
+                                <td>1.65 m</td>
+                                <td>80 kg</td>
+                                <td class="bmi-table-value">29</td>
+                                <td><span class="bmi-badge bmi-badge-overweight">Overweight</span></td>
+                            </tr>
+                            <tr>
+                                <td>1.80 m</td>
+                                <td>110 kg</td>
+                                <td class="bmi-table-value">34</td>
+                                <td><span class="bmi-badge bmi-badge-obese">Obese</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Practical Application -->
+            <div class="practical-application">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="8" x2="12" y2="12"></line>
+                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                </svg>
+                <div>
+                    <h4 class="practical-title">Practical Application in Nursing</h4>
+                    <ul class="practical-list">
+                        <li>
+                            <span class="practical-bullet"></span>
+                            Accurate height/weight → correct medication dosing
+                        </li>
+                        <li>
+                            <span class="practical-bullet"></span>
+                            BMI → nutritional counselling
+                        </li>
+                        <li>
+                            <span class="practical-bullet"></span>
+                            Risk assessment tools → early detection of complications
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conclusion Section -->
+    <section id="conclusion" class="section">
+        <div class="container">
+            <!-- Conclusion -->
+            <div class="conclusion-content">
+                <h2 class="conclusion-title">Conclusion</h2>
+                <div class="conclusion-card">
+                    <p class="conclusion-text">
+                        Both <span class="conclusion-highlight">risk management</span> and accurate 
+                        <span class="conclusion-highlight">anthropometric measurements</span> (weight & height) 
+                        are essential nursing competencies. They ensure safer, evidence-based care and strong clinical reasoning.
+                    </p>
+                </div>
+            </div>
+
+            <!-- References -->
+            <div class="references-section">
+                <div class="references-header">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"></path>
+                    </svg>
+                    <h3 class="references-title">References</h3>
+                </div>
+                <div class="references-list-container">
+                    <ul class="references-list">
+                        <li>
+                            <span class="reference-number">1</span>
+                            <p>Standard BMI classifications and use in nursing assessment.</p>
+                        </li>
+                        <li>
+                            <span class="reference-number">2</span>
+                            <p>Height and weight measurement best practices in nursing.</p>
+                        </li>
+                        <li>
+                            <span class="reference-number">3</span>
+                            <p>Risk management helps identify, assess, and mitigate hazards in nursing to enhance patient safety.</p>
+                        </li>
+                        <li>
+                            <span class="reference-number">4</span>
+                            <p>Height and weight measurement procedures are foundational clinical steps in nursing assessment.</p>
+                        </li>
+                        <li>
+                            <span class="reference-number">5</span>
+                            <p>BMI calculation and categories are essential for interpreting weight-for-height data.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <span>© 2026 Husham Tahir</span>
+                    <span class="footer-separator">•</span>
+                    <span class="footer-text">BS Nursing Portfolio</span>
+                </div>
+                <div class="footer-right">
+                    <span>Made with</span>
+                    <svg class="footer-heart" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                    </svg>
+                    <span>for Professional Nursing Practice</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
